@@ -1,16 +1,39 @@
-.container {
-    display: flex;
-    justify-content: center; /* Align items horizontally (center, flex-start, flex-end, space-between, space-around) */
-    align-items: center; /* Align items vertically (center, flex-start, flex-end, stretch, baseline) */
-    flex-wrap: wrap; /* Handle wrapping of items (nowrap, wrap, wrap-reverse) */
-    gap: 10px; /* Add spacing between items */
-}
-
-.item {
-    flex: 1; /* Flex-grow, flex-shrink, and flex-basis combined */
-    min-width: 100px; /* Minimum width for responsive design */
-    padding: 10px;
-    background-color: lightblue;
-    text-align: center;
-    border: 1px solid #ccc;
+@layer components {
+    .btn {
+      --btn-display: inline-flex;
+      --btn-base-font-size: var(--font-size-sm, 20px);
+      --btn-base-text-color: var(--color-black, #000);
+      --btn-base-background-color: var(--color-white, #fff);
+      --btn-border: 1px solid var(--color-black, #000);
+      --btn-base-padding-inline: 35px;
+      --btn-base-padding-block: 20px;
+      --btn-border-radius: var(--border-radius-md, 14px);
+      --btn-hover-background-color: var(--color-black, #000);
+      --btn-hover-color: var(--color-white, #fff);
+  
+      --btn-icon-align-items: center;
+      --btn-icon-gap: 14px;
+  
+      --btn-icon-arrow-color: var(--color-green, #b9ff66);
+      --btn-icon-arrow-justify: center;
+      --btn-icon-arrow-size: 40px;
+      --btn-icon-arrow-background-color: var(--color-black);
+      --btn-icon-arrow-border-radius: 100%;
+  
+      display: var(--btn-display);
+      font-size: var(--btn-base-font-size);
+      color: var(--btn-base-text-color);
+      background-color: var(--btn-base-background-color);
+      padding-inline: var(--btn-base-padding-inline);
+      padding-block: var(--btn-base-padding-block);
+      border: var(--btn-border);
+      border-radius: var(--btn-border-radius);
+      text-decoration: none;
+      transition: all var(--transition-base-time);
+  
+      &:hover {
+        background-color: var(--btn-hover-background-color);
+        color: var(--btn-hover-color);
+      }
+    }
 }
