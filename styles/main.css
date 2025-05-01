@@ -1,0 +1,16 @@
+.container {
+    display: flex;
+    justify-content: center; /* Align items horizontally (center, flex-start, flex-end, space-between, space-around) */
+    align-items: center; /* Align items vertically (center, flex-start, flex-end, stretch, baseline) */
+    flex-wrap: wrap; /* Handle wrapping of items (nowrap, wrap, wrap-reverse) */
+    gap: 10px; /* Add spacing between items */
+}
+
+.item {
+    flex: 1; /* Flex-grow, flex-shrink, and flex-basis combined */
+    min-width: 100px; /* Minimum width for responsive design */
+    padding: 10px;
+    background-color: lightblue;
+    text-align: center;
+    border: 1px solid #ccc;
+}
