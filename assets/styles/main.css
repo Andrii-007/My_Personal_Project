@@ -7,7 +7,7 @@ body {
 
 .main-header {
   position: relative;
-  height: 1100px;
+  height: 100px;
   z-index: 1;
   overflow: hidden;
 }
