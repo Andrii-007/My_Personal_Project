@@ -84,12 +84,12 @@ body {
   text-align: left;
   color: #000000;
   left: 1100px;
-  padding: 45px;
+  padding: 30px;
   background-color: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(0.01px);
+  -webkit-backdrop-filter: blur(0.01px);
   border-radius: 6px;
-  top: 240px;
+  top: 95px;
 }
 
 .name_motto h1 {
@@ -111,7 +111,7 @@ body {
   padding: 60px 20px;
 }
 
-.wrapper .slid {
+/* .wrapper .slid {
   position: relative;
   width: 300px;
   height: 300px;
@@ -119,7 +119,7 @@ body {
   overflow: hidden;
   box-shadow: 0px 20px 25px rgba(25, 25, 25, 0.1);
   transition: 0.5s;
-}
+} */
 
 .wrapper .slid:hover {
   height: 420px;
@@ -138,95 +138,15 @@ body {
   transition: 0.5s;
 }
 
-.wrapper .slid:hover .img {
-  animation: in 0.5s ease-in-out;
-}
 
-@keyframes out {
-  0% { background-size: 140%; }
-  40% { background-size: 160%; }
-  100% { background-size: 140%; }
-}
 
-@keyframes in {
-  0% { background-size: 140%; }
-  40% { background-size: 160%; }
-  100% { background-size: 140%; }
-}
 
-.wrapper .slid .img::before {
-  content: '';
-  position: absolute;
-  bottom: -40%;
-  width: 100%;
-  height: 80px;
-  border-radius: 40px;
-}
 
-.wrapper .slid .img::after {
-  position: absolute;
-  right: 0;
-  bottom: 40%;
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background-color: transparent;
-  box-shadow: 75px 70px 0 40px #fff;
-}
 
-.wrapper .slid .content {
-  padding: 10px 20px;
-}
 
-.wrapper .slid .content h3 {
-  margin: 18px 0 5px;
-  font-size: 1.2em;
-}
 
-.wrapper .slid .content span {
-  font-size: 0.9em;
-  color: #888;
-}
 
-.wrapper .slid .content p {
-  font-size: 0.9em;
-  color: #333;
-}
 
-.wrapper .slid .content {
-  position: relative;
-  top: -20px;
-  z-index: 10;
-  padding: 0px 30px;
-  transition: 0.5s;
-}
-
-.wrapper .slid .content h3 {
-  position: relative;
-  font-size: 20px;
-  color: black;
-}
-
-.wrapper .slid .content h3 span {
-  position: absolute;
-  bottom: -12px;
-  font-size: 12px;
-  font-weight: 400;
-  opacity: 0.75;
-}
-
-.wrapper .slid .content p {
-  position: relative;
-  font-size: 15px;
-  color: #222;
-  transition: 0.5s;
-  opacity: 0;
-  padding-top: 5px;
-}
-
-.wrapper .slid:hover .content p {
-  opacity: 1;
-}
 
 .title--popular--destinations h1{
   position: relative;
