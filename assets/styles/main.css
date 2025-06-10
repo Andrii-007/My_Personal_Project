@@ -58,7 +58,7 @@ body {
 
 .main-navigation a {
   text-decoration: none;
-  color: #333;
+  color: #000000;
   font-weight: bold;
 }
 
@@ -70,7 +70,7 @@ body {
 .btn {
   padding: 8px 16px;
   background-color: rgba(0, 0, 0, 0);
-  color: #333;
+  color: #000000;
   text-decoration: none;
   border-radius: 4px;
 }
@@ -102,51 +102,52 @@ body {
   padding: 20px;
 }
 
-.wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 40px;
-  padding: 60px 20px;
+div.gallery {
+  border: 1px solid #ccc;
 }
 
-/* .wrapper .slid {
-  position: relative;
-  width: 300px;
-  height: 300px;
-  border-radius: 40px;
-  overflow: hidden;
-  box-shadow: 0px 20px 25px rgba(25, 25, 25, 0.1);
-  transition: 0.5s;
-} */
-
-.wrapper .slid:hover {
-  height: 420px;
-  background-color: rgb(171, 222, 231);
+div.gallery:hover {
+  border: 1px solid #777;
 }
 
-.wrapper .slid .img {
-  position: relative;
+div.gallery img {
   width: 100%;
   height: 260px;
-  background-image: var(--img);
-  background-repeat: no-repeat;
-  background-position: top,center;
-  background-size: 140%;
-  animation: out 0.5s ease-in-out;
-  transition: 0.5s;
 }
 
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
 
+* {
+  box-sizing: border-box;
+}
 
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
 
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
 
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
 
-
-
-
-
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
 .title--popular--destinations h1{
   position: relative;
@@ -170,55 +171,85 @@ body {
   left:140px;
   width: 350px;               
   height: 4px;                
-  background-color: #7ed3fa;  
+  background-color: #3fbffb;  
   margin: 10px 120px;        
   border-radius: 2px;         
 }
 
-.title--Interesting--facts h1{
+.title--special--offers h1{
   position: relative;
-  margin-right: 120px;
+  margin-left: 120px;
   bottom: -12px;
    font-size: 30px;
 }
 
-.title--Interesting--facts h4{
+.title--special--offers h4{
   position: relative;
-  margin-right: 120px;
+  margin-left: 120px;
   font-size: 15px;
 }
 
-.title--Interesting--facts {
-  text-align: right;
+.title--special--offers {
+  text-align: left;
   margin-bottom: 30px;
 }
 
-.title--Interesting--facts {
-  position: relative; /* можна для точного позиціювання */
-  width: 100%; /* або ширина контейнера */
+.color-line-under-title {
+  left:140px;
+  width: 350px;               
+  height: 4px;                
+  background-color: #3fbffb;  
+  margin: 10px 120px;        
+  border-radius: 2px;         
 }
 
-.color-line-under-title-facts {
-  width: 350px;
-  height: 4px;
-  background-color: #7ed3fa;
-  margin-left: auto;    /* вирівнювання праворуч */
-  margin-top: 20px;     /* відстань зверху від заголовка, можна змінювати вручну */
-  margin-right: 120px;   /* відстань від правого краю контейнера */
+.footer {
+  margin-top: 50px; 
+  background-color: #5d4baf;
+  padding: 40px 20px;
+  color:#fff;
 }
 
-.title--Interesting--facts {
-  text-align: right;
-  margin-bottom: 10px;  /* зменшено з 30px */
-  position: relative;
-  width: 100%;
-}
-
-.wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 40px;
-  padding: 20px 20px 60px 20px; /* зверху зменшено з 60px до 20px */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer h2, .footer h3 {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+
+.footer p, .footer a {
+  color: #ccc;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #fff;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer li {
+  margin-bottom: 8px;
+}
+
+.footer-social .social-icons a {
+  margin-right: 12px;
+  font-size: 18px;
+  color: #fff;
+  display: inline-block;
+}
+
+.footer-social .social-icons a:hover {
+  color: #00aced;
 }
